@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <header id="header"> </header>
+    <nav id="menu"> 
+        <a href="#top">Trang chủ</a>
+        <a href="#listbaihat">Bài hát</a>
+        <a href="#listcasi">Ca sĩ</a>
+        <a href="#listtoptrend">Thịnh hành</a>
+    </nav>
+    <main> 
+        <section id="listbaihat">
+            <h2>Danh sách bài hát </h2>
+            <div id="data"></div>
+        </section>
+        <section id="listcasi">
+            <h2> Danh sách ca sĩ</h2>
+            <div id="data"></div>
+        </section>
+        <section id="listnentang">
+            <h2> Các nền tảng</h2>
+            <div id="data"></div>
+        </section>
+        <section id="listtoptrend">
+            <h2> Nghệ sĩ thịnh hành </h2>
+            <div id="data"></div>
+        </section>
+    </main>
+    <footer> Họ tên sinh viên: Nguyễn Văn Hiệp @2024</footer>
+</body>
+</html>
+<script type="module">
+   import { showlistbaihat, showlistcasi, showlistnentang , showlistTopTrending} from './js/app.js';
+   document.querySelector("#listbaihat #data").innerHTML = showlistbaihat();
+   document.querySelector("#listcasi #data").innerHTML = showlistcasi();
+   document.querySelector("#listnentang #data").innerHTML = showlistnentang();
+   document.querySelector("#listtoptrend #data").innerHTML = await showlistTopTrending();
+</script>
